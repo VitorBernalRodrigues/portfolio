@@ -379,6 +379,51 @@ main {
   font-weight: 500;
 }
 
+.registro {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1.5rem;
+  max-width: 46rem;
+  padding-block: 1.75rem;
+  border-bottom: 1px solid var(--linha);
+}
+
+.registro:last-child {
+  border-bottom: 0;
+}
+
+.registro__data {
+  margin: 0.2rem 0 0;
+  font-weight: 700;
+  color: var(--grafite);
+}
+
+.registro h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.4rem;
+}
+
+.registro__papel {
+  margin: 0.9rem 0 0;
+  padding: 0.65rem 0.9rem;
+  border-left: 4px solid var(--marca);
+  border-radius: 0 6px 6px 0;
+  background: var(--branco);
+}
+
+.registro__nota {
+  margin: 0.9rem 0 0;
+  color: var(--grafite);
+  font-size: 0.9rem;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0.9rem 0 0;
+}
+
 .rodape {
   padding-block: 2rem 3rem;
   border-top: 1px solid var(--linha);

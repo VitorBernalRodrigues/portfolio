@@ -379,6 +379,13 @@ main {
   font-weight: 500;
 }
 
+.tag--premio {
+  border-color: #D9B800;
+  background: var(--marca);
+  color: var(--tinta);
+  font-weight: 700;
+}
+
 .registro {
   display: grid;
   grid-template-columns: 6.5rem 1fr;

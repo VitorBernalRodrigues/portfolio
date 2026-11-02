@@ -95,6 +95,10 @@ p {
   color: #B9C2DE;
 }
 
+.menu-botao {
+  display: none;
+}
+
 .menu ul {
   list-style: none;
   margin: 2.5rem 0 0;
@@ -115,6 +119,12 @@ p {
 .menu a:hover {
   color: var(--branco);
   background: rgba(255, 255, 255, 0.08);
+}
+
+.menu a.ativo {
+  color: var(--tinta);
+  background: var(--marca);
+  font-weight: 700;
 }
 
 .lateral__redes {
@@ -543,6 +553,26 @@ main {
 
   .marca__curso {
     font-size: 0.8rem;
+  }
+
+  .menu-botao {
+    display: block;
+    padding: 0.5rem 1rem;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--branco);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+
+  .js .menu {
+    display: none;
+  }
+
+  .js .menu.aberto {
+    display: block;
   }
 
   .menu ul {

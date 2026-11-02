@@ -52,6 +52,11 @@ p {
   margin: 0 0 0.75rem;
 }
 
+:focus-visible {
+  outline: 3px solid var(--foco);
+  outline-offset: 3px;
+}
+
 :where(main a) {
   color: var(--tinta);
   font-weight: 500;
@@ -65,6 +70,22 @@ p {
   background: var(--marca);
 }
 
+.pular {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  z-index: 20;
+  background: var(--marca);
+  color: var(--tinta);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.pular:focus {
+  top: 1rem;
+}
+
 .lateral {
   position: sticky;
   top: 0;
@@ -74,6 +95,10 @@ p {
   padding: 2.25rem 1.5rem;
   background: var(--tinta);
   color: var(--branco);
+}
+
+.lateral :focus-visible {
+  outline-color: var(--marca);
 }
 
 .marca {
@@ -635,5 +660,15 @@ main {
   .sites,
   .habilidades {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .carteirinha {
+    animation: none;
   }
 }

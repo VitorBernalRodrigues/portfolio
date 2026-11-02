@@ -458,6 +458,53 @@ main {
   margin: 1rem 0 0.35rem;
 }
 
+.habilidades {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.habilidades h3 {
+  font-size: 1.05rem;
+}
+
+.contato {
+  margin-top: 3rem;
+}
+
+.contato h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+}
+
+.contato__lista {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+.contato__lista li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+}
+
+.contato__rotulo {
+  width: 5rem;
+  color: var(--grafite);
+  font-size: 0.9rem;
+}
+
+.contato__lista a {
+  font-size: 1.2rem;
+  font-weight: 700;
+  word-break: break-word;
+}
+
 .rodape {
   padding-block: 2rem 3rem;
   border-top: 1px solid var(--linha);

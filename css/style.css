@@ -297,6 +297,88 @@ main {
   opacity: 0.85;
 }
 
+.secao {
+  padding-block: 4rem;
+  border-top: 1px solid var(--linha);
+  scroll-margin-top: 1rem;
+}
+
+.secao h2 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.5rem;
+}
+
+.secao__intro {
+  color: var(--grafite);
+  max-width: 40rem;
+}
+
+.linha-tempo {
+  list-style: none;
+  margin: 2rem 0 0;
+  padding: 0 0 0 1.75rem;
+  border-left: 2px solid var(--tinta);
+  max-width: 42rem;
+}
+
+.linha-tempo li {
+  position: relative;
+  padding-bottom: 2rem;
+}
+
+.linha-tempo li:last-child {
+  padding-bottom: 0;
+}
+
+.linha-tempo li::before {
+  content: "";
+  position: absolute;
+  left: calc(-1.75rem - 8px);
+  top: 0.3rem;
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--tinta);
+  border-radius: 50%;
+  background: var(--marca);
+}
+
+.linha-tempo time {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--grafite);
+}
+
+.linha-tempo h3 {
+  font-size: 1.2rem;
+  margin: 0.1rem 0 0.35rem;
+}
+
+.linha-tempo p {
+  margin-bottom: 0.5rem;
+}
+
+.tags {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.9rem 0 0;
+  padding: 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--linha);
+  border-radius: 999px;
+  background: var(--branco);
+  color: var(--grafite);
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
 .rodape {
   padding-block: 2rem 3rem;
   border-top: 1px solid var(--linha);

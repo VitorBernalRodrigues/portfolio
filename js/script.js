@@ -34,3 +34,19 @@ const observador = new IntersectionObserver((entradas) => {
 }, { rootMargin: '-35% 0px -60% 0px' });
 
 secoes.forEach((secao) => observador.observe(secao));
+
+const botaoCopiar = document.querySelector('.copiar');
+
+botaoCopiar.addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(botaoCopiar.dataset.copiar);
+    botaoCopiar.textContent = 'E-mail copiado';
+  } catch {
+    botaoCopiar.textContent = 'Selecione o e-mail ao lado para copiar';
+  }
+  setTimeout(() => {
+    botaoCopiar.textContent = 'Copiar e-mail';
+  }, 2500);
+});
+
+document.getElementById('ano').textContent = new Date().getFullYear();

@@ -515,6 +515,21 @@ main {
   word-break: break-word;
 }
 
+.copiar {
+  padding: 0.3rem 0.8rem;
+  border: 1px solid var(--tinta);
+  border-radius: 6px;
+  background: var(--branco);
+  color: var(--tinta);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.copiar:hover {
+  background: var(--marca);
+}
+
 .rodape {
   padding-block: 2rem 3rem;
   border-top: 1px solid var(--linha);

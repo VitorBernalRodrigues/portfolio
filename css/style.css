@@ -140,6 +140,163 @@ main {
   padding: 0 clamp(1.25rem, 5vw, 4.5rem);
 }
 
+.sobre {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 3rem;
+  align-items: center;
+  padding-block: 5.5rem 4.5rem;
+}
+
+.sobre h1 {
+  font-size: clamp(2.75rem, 6.5vw, 4.5rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 0.98;
+  margin-bottom: 1.5rem;
+}
+
+.sobre__texto {
+  max-width: 34rem;
+}
+
+.sobre__intro {
+  font-size: 1.3rem;
+  line-height: 1.45;
+}
+
+.sobre__texto > p:not(.sobre__intro) {
+  color: var(--grafite);
+}
+
+.acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.botao {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  border: 2px solid var(--tinta);
+  border-radius: 8px;
+  background: var(--tinta);
+  color: var(--branco);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.botao:hover {
+  background: #2D3C7A;
+  border-color: #2D3C7A;
+}
+
+.botao--linha {
+  background: transparent;
+  color: var(--tinta);
+}
+
+.botao--linha:hover {
+  background: var(--marca);
+  border-color: var(--tinta);
+}
+
+.carteirinha {
+  width: 300px;
+  overflow: hidden;
+  border: 1px solid var(--linha);
+  border-radius: 14px;
+  background: var(--branco);
+  box-shadow: 0 20px 40px -20px rgba(28, 39, 83, 0.5);
+  transform: rotate(-2deg);
+  animation: assentar 0.8s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+
+@keyframes assentar {
+  from {
+    opacity: 0;
+    transform: translateY(-24px) rotate(-8deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(-2deg);
+  }
+}
+
+.carteirinha__topo {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.7rem 1rem;
+  background: var(--tinta);
+  color: var(--branco);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.carteirinha__faixa {
+  height: 6px;
+  background: var(--marca);
+}
+
+.carteirinha__corpo {
+  display: grid;
+  grid-template-columns: 84px 1fr;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.carteirinha__foto {
+  display: grid;
+  place-items: center;
+  width: 84px;
+  height: 104px;
+  border-radius: 6px;
+  background-color: var(--papel);
+  background-image:
+    linear-gradient(var(--grade) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grade) 1px, transparent 1px);
+  background-size: 10px 10px;
+  font-size: 1.75rem;
+  font-weight: 800;
+}
+
+.carteirinha__foto img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.carteirinha dl {
+  display: grid;
+  gap: 0.4rem;
+  margin: 0;
+}
+
+.carteirinha dt {
+  font-size: 0.7rem;
+  color: var(--grafite);
+}
+
+.carteirinha dd {
+  margin: 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.carteirinha__codigo {
+  height: 26px;
+  margin: 0 1rem 1rem;
+  background: repeating-linear-gradient(90deg,
+    var(--tinta) 0 2px, transparent 2px 5px,
+    var(--tinta) 5px 6px, transparent 6px 9px,
+    var(--tinta) 9px 12px, transparent 12px 14px);
+  opacity: 0.85;
+}
+
 .rodape {
   padding-block: 2rem 3rem;
   border-top: 1px solid var(--linha);
